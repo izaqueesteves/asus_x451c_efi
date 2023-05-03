@@ -1,0 +1,28 @@
+Preparando o pendrive
+
+1-Atenção! O pendrive precisa estar no modo GPT!
+2-Uma dica é abrir o diskpart do ms-dos e após selecionar a unidade de disco escolher a opção clean
+
+3-Gravar imagem do arquivo Olarila High Sierra.raw usando o Balena Etcher
+4-Abrir o pendrive usando o Minitool Partition e adicionar uma letra a partição de 200MB criada no Pendrive
+5-Abrir a partição EFI através do Explorer++ (abra como administrador)
+6-Substituia a pasta EFI pela pasta com a EFI correta
+
+
+Instalação
+
+1-Durante a instalação use a opção MacOS Expandido (Journaling)
+
+Após a instalação
+
+1-Instale o App Clover5118.pkg e apenas avance as etapas sem configurar nada
+2-Abra o Finder e na barra superior escolha Finder->Preferences. Ative a opção de mostrar as unidades de disco. O HD com o sistema aparecerá na área de trabalho.
+3-Após isso abra o app Clover Configurator e encontre a opção Mount EFI.
+4-Copie a pasta EFI da partição EFI do pendrive para a partição EFI do SSD.
+
+Configurando entrada de boot EFI no setup
+
+1-Na aba boot escolha add new boot option. Entre na opção "add new boot option" e digite um nome (ex. Clover)
+2-A opção "select file system" não precisa ser alterada
+3-Na opção "patch for boot option" digite o seguinte caminho "\efi\boot\bootx64.efi" e pressione ENTER
+4-Agora marque a opção Create e pressione ENTER
